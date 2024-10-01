@@ -1,11 +1,16 @@
 #include<iostream>
+#include<string> 
 using namespace std;
 int main(){
-	int num1=4,num2=7;
-	cout<<"add = "<<num1+num2<<endl;
-	cout<<"sub = "<<num2-num1<<endl;
-	cout<<"mul = "<<num1*num2<<endl;
-	cout<<"div = "<<num2/num1<<endl;
-	cout<<"mod = "<<num1%num2;
-	return 0;
+    int rows;
+    cout << "Enter rows = ";
+    cin >> rows;
+    for(int i = 1; i <= rows; i++){
+        cout << string(rows - i, ' ') << string(2 * i - 1, '*') << endl;
+    }
+    for(int i = rows - 1; i >= 1; i--){
+        cout << string(rows - i, ' ') << string(2 * i - 1, '*') << endl;
+    }
+    return 0;
 }
+
